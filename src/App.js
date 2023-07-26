@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import DataComponent from './components/DataComponent';
+import ErrorComponent from './components/ErrorComponent';
+import LoadingComponent from './components/LoadingComponent';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Компонент для успешного получения данных:</h1>
+      <DataComponent />
+
+      <h1>Компонент для получения ошибки:</h1>
+      <ErrorComponent />
+
+      <h1>Компонент для индикатора загрузки:</h1>
+      <LoadingComponent />
     </div>
   );
-}
+};
 
 export default App;
